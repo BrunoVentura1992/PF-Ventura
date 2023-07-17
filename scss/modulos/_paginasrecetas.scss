@@ -1,21 +1,15 @@
 /*Estilos Paginas Recetas*/
 .main-paginas-recetas {
-    background-color: rgb(55, 159, 163);
+    background-color: $color-principal;
     .h1-paginas-recetas {
-        font-size: 40px;
-        font-weight: bold;
         text-align: center;
-        color: black;
-        font-family: 'M PLUS 2', sans-serif;
-        font-weight: 400;
+        color: $negro;
+        @include fuentes(400, 40px, $mplus);
     }
     .h2-paginas-recetas {
-        font-size: 30px;
-        font-weight: bold;
         text-align: center;
-        color: black;
-        font-family: 'M PLUS 2', sans-serif;
-        font-weight: 400;
+        color: $negro;
+        @include fuentes(400, 30px, $mplus)
     }
     .img-paginas-recetas {
         display: block;
@@ -23,28 +17,21 @@
         margin-right: auto;
     }
     .h3-paginas-recetas {
-        font-size: 25px;
-        font-weight: bold;
         text-align: center;
-        color: black;
-        font-family: 'M PLUS 2', sans-serif;
-        font-weight: 350;
+        color: $negro;
+        @include fuentes(350, 25px, $mplus);
     }
     .p-paginas-recetas-items {
         margin-bottom: 10px;
-        font-size: 25px;
-        font-family: 'M PLUS 2', sans-serif;
-        font-weight: 400;
         text-align: justify;
         text-decoration: underline;
         margin: 10px;
+        @include fuentes(400, 25px, $mplus)
     }
     ul {
         .li-paginas-recetas {
             margin-bottom: 25 px;
-            font-size: 15px;
-            font-family: 'M PLUS 2', sans-serif;
-            font-weight: 400;
+            @include fuentes(400, 15px, $mplus);
             text-align: justify;
         }
     }

@@ -1,13 +1,11 @@
 /*Estilos Recetas*/
 .main-recetas {
-    display: flex;
     height: 75vh;
-    justify-content: center;
-    background-color: rgb(110, 155, 141);
+    @include display(flex, center);
+    background-color: $color-principal;
     .container-recetas {
-        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        @include display(flex, center);
         .tarjeta-recetas {
             flex: 1 0 calc(25% - 40px);
             width: 20%;
@@ -16,7 +14,7 @@
             padding: 10px;
             display: flex;
             flex-direction: column;
-            border: 3px solid rgb(217, 221, 203);
+            border: 3px solid $color-index;
             .img-tarjetas {
                 width: 100%;
                 height: auto;
@@ -24,36 +22,28 @@
             }
             .tarjeta-principal {
                 flex: 1;
-                display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                @include display(flex, space-between);
                 .h2-tarjetas {
-                    font-size: 20px;
-                    font-weight: bold;
                     text-align: center;
-                    color: black;
-                    font-family: 'M PLUS 2', sans-serif;
-                    font-weight: 400;
+                    color: $negro;
+                    @include fuentes(400, 20px, $mplus);
                 }
                 .p-tarjetas {
                     margin-bottom: 10px;
-                    font-size: 15px;
-                    font-family: 'M PLUS 2', sans-serif;
-                    font-weight: 400;
                     text-align: justify;
+                    @include fuentes(400, 15px, $mplus);
                 }
                 .ver-mas-recetas {
                     display: inline-block;
                     padding: 5px 10px;
-                    background-color: #e0e2d6;
-                    color: rgb(5, 5, 5);
+                    background-color: $color-index;
+                    color: $negro;
                     text-decoration: none;
                     border-radius: 3px;
-                    border: 1px solid rgb(182, 182, 190);
+                    border: 1px solid;
                     text-align: center;
-                    font-family: 'M PLUS 2', sans-serif;
-                    font-weight: 400;
-                    font-size: 15px;
+                    @include fuentes(400, 15px, $mplus);
                 }
             }
         }

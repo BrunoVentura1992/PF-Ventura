@@ -1,49 +1,41 @@
-#main-index {
+.main-index {
     height: 75vh;
     background-image: url(https://images5.alphacoders.com/983/983077.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    #seccion-index {
+    @extend .flex-center;
+    .seccion-index {
         height: 100%;
-        display: flex;
+        @extend .flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        #h1-index {
-            color: rgb(236, 224, 224);
-            font-family: 'Caveat', cursive;
-            font-weight: 700;
-            font-size: 60px;
+        .h1-index {
+            color: $color-index;
+            @include fuentes(700, 60px, $caveat);
         }
-        #h2-index {
-            color:rgb(236, 224, 224);
-            font-family: 'Caveat', cursive;
-            font-weight:700;
-            font-size: 45px;
+        .h2-index {
+            color: $color-index;
+            @include fuentes(700, 45px, $caveat);
         }    
     }
 }
 @media (max-width: 600px) {
-    #main-index {
+    .main-index {
     height: auto;
     padding: 20px;
     }
 
-    #h1-index {
+    .h1-index {
     font-size: 40px;
     text-align: center;
     }
 
-    #h2-index {
+    .h2-index {
     font-size: 30px;
     text-align: center;
     }
 
-    #seccion-index {
+    .seccion-index {
     text-align: center;
     }
 

@@ -1,10 +1,8 @@
 /*Estilos Footer*/
 footer {
     height: 10vh;
-    background-color: rgb(179, 165, 149);
     .footer-container {
-        display: flex;
-        justify-content: space-between;
+        @include display(flex, space-between);
         align-items: center;
         height: 100%;
         padding: 0 20px;
@@ -17,12 +15,10 @@ footer {
             }
         }
         .copyright {
-            font-size: 14px;
             text-align: center;
             flex: 1;
             margin: 0;
-            font-family: 'M PLUS 2', sans-serif;
-            font-weight: 400;
+            @include fuentes(400, 14px, $mplus)
         }
     }
 }

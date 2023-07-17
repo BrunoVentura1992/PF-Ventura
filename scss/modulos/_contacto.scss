@@ -9,10 +9,8 @@
     background-size: cover;
     #h1-contacto {
         margin-bottom: 20px;
-        color: rgb(0, 0, 0);
-        font-family: 'M PLUS 2', sans-serif;
-        font-weight: 400;
-        font-size: 40px;
+        color: $negro;
+        @include fuentes(400, 40px, $mplus);
     }
     .formulario {
         display: grid;
@@ -22,17 +20,13 @@
         gap: 5px;
             label {
                 font-weight: bold;
-                background-color: rgb(110, 155, 141);
-                color: white;
-                font-family: 'M PLUS 2', sans-serif;
-                font-weight: 400;
-                font-size: 20px;
+                background-color: $color-principal;
+                color: $blanco;
+                @include fuentes(400, 20px, $mplus);
             }
             input::placeholder,
             textarea::placeholder {
-                font-family: 'M PLUS 2', sans-serif;
-                font-weight: 400;
-                font-size: 15px;
+                @include fuentes(400, 20px, $mplus);
             }
             input {
                 padding: 10px;
@@ -48,19 +42,16 @@
             }
         }
         .enviar {
-            display: flex;
-            justify-content: center;
+            @include display(flex, center);
             .button {
                 padding: 10px 20px;
-                color: white;
-                background-color: rgb(110, 155, 141);
+                color: $blanco;
+                background-color: $color-principal;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
                 padding: 15px 30px;
-                font-size: 20px;
-                font-family: 'M PLUS 2', sans-serif;
-                font-weight: 400;
+                @include fuentes(400, 20px, $mplus);
             }
         }
     }

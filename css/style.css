@@ -1,3 +1,9 @@
+.flex-center, .main-index .seccion-index, .main-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*Estilos Generales*/
 * {
   margin: 0;
@@ -15,54 +21,49 @@ header {
 }
 header .navbar {
   height: 100%;
+  font-weight: 500;
+  font-size: 16px;
   font-family: "M PLUS 2", sans-serif;
-  font-weight: 400;
 }
 
-#main-index {
+.main-index {
   height: 75vh;
   background-image: url(https://images5.alphacoders.com/983/983077.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-#main-index #seccion-index {
+.main-index .seccion-index {
   height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-#main-index #seccion-index #h1-index {
-  color: rgb(236, 224, 224);
-  font-family: "Caveat", cursive;
+.main-index .seccion-index .h1-index {
+  color: rgba(236, 224, 224, 0.774);
   font-weight: 700;
   font-size: 60px;
-}
-#main-index #seccion-index #h2-index {
-  color: rgb(236, 224, 224);
   font-family: "Caveat", cursive;
+}
+.main-index .seccion-index .h2-index {
+  color: rgba(236, 224, 224, 0.774);
   font-weight: 700;
   font-size: 45px;
+  font-family: "Caveat", cursive;
 }
 
 @media (max-width: 600px) {
-  #main-index {
+  .main-index {
     height: auto;
     padding: 20px;
   }
-  #h1-index {
+  .h1-index {
     font-size: 40px;
     text-align: center;
   }
-  #h2-index {
+  .h2-index {
     font-size: 30px;
     text-align: center;
   }
-  #seccion-index {
+  .seccion-index {
     text-align: center;
   }
   .d-flex {
@@ -76,7 +77,6 @@ header .navbar {
 /*Estilos Footer*/
 footer {
   height: 10vh;
-  background-color: rgb(179, 165, 149);
 }
 footer .footer-container {
   display: flex;
@@ -94,24 +94,24 @@ footer .footer-container .redes-sociales img {
   height: 30px;
 }
 footer .footer-container .copyright {
-  font-size: 14px;
   text-align: center;
   flex: 1;
   margin: 0;
-  font-family: "M PLUS 2", sans-serif;
   font-weight: 400;
+  font-size: 14px;
+  font-family: "M PLUS 2", sans-serif;
 }
 
 /*Estilos Recetas*/
 .main-recetas {
-  display: flex;
   height: 75vh;
+  display: flex;
   justify-content: center;
   background-color: rgb(110, 155, 141);
 }
 .main-recetas .container-recetas {
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: center;
 }
 .main-recetas .container-recetas .tarjeta-recetas {
@@ -122,7 +122,7 @@ footer .footer-container .copyright {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  border: 3px solid rgb(217, 221, 203);
+  border: 3px solid rgba(236, 224, 224, 0.774);
 }
 .main-recetas .container-recetas .tarjeta-recetas .img-tarjetas {
   width: 100%;
@@ -131,37 +131,36 @@ footer .footer-container .copyright {
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal {
   flex: 1;
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: space-between;
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .h2-tarjetas {
-  font-size: 20px;
-  font-weight: bold;
   text-align: center;
-  color: black;
-  font-family: "M PLUS 2", sans-serif;
+  color: rgb(0, 0, 0);
   font-weight: 400;
+  font-size: 20px;
+  font-family: "M PLUS 2", sans-serif;
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .p-tarjetas {
   margin-bottom: 10px;
+  text-align: justify;
+  font-weight: 400;
   font-size: 15px;
   font-family: "M PLUS 2", sans-serif;
-  font-weight: 400;
-  text-align: justify;
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .ver-mas-recetas {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #e0e2d6;
-  color: rgb(5, 5, 5);
+  background-color: rgba(236, 224, 224, 0.774);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   border-radius: 3px;
-  border: 1px solid rgb(182, 182, 190);
+  border: 1px solid;
   text-align: center;
-  font-family: "M PLUS 2", sans-serif;
   font-weight: 400;
   font-size: 15px;
+  font-family: "M PLUS 2", sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -192,23 +191,21 @@ footer .footer-container .copyright {
 }
 /*Estilos Paginas Recetas*/
 .main-paginas-recetas {
-  background-color: rgb(55, 159, 163);
+  background-color: rgb(110, 155, 141);
 }
 .main-paginas-recetas .h1-paginas-recetas {
-  font-size: 40px;
-  font-weight: bold;
   text-align: center;
-  color: black;
-  font-family: "M PLUS 2", sans-serif;
+  color: rgb(0, 0, 0);
   font-weight: 400;
+  font-size: 40px;
+  font-family: "M PLUS 2", sans-serif;
 }
 .main-paginas-recetas .h2-paginas-recetas {
-  font-size: 30px;
-  font-weight: bold;
   text-align: center;
-  color: black;
-  font-family: "M PLUS 2", sans-serif;
+  color: rgb(0, 0, 0);
   font-weight: 400;
+  font-size: 30px;
+  font-family: "M PLUS 2", sans-serif;
 }
 .main-paginas-recetas .img-paginas-recetas {
   display: block;
@@ -216,27 +213,26 @@ footer .footer-container .copyright {
   margin-right: auto;
 }
 .main-paginas-recetas .h3-paginas-recetas {
-  font-size: 25px;
-  font-weight: bold;
   text-align: center;
-  color: black;
-  font-family: "M PLUS 2", sans-serif;
+  color: rgb(0, 0, 0);
   font-weight: 350;
+  font-size: 25px;
+  font-family: "M PLUS 2", sans-serif;
 }
 .main-paginas-recetas .p-paginas-recetas-items {
   margin-bottom: 10px;
-  font-size: 25px;
-  font-family: "M PLUS 2", sans-serif;
-  font-weight: 400;
   text-align: justify;
   text-decoration: underline;
   margin: 10px;
+  font-weight: 400;
+  font-size: 25px;
+  font-family: "M PLUS 2", sans-serif;
 }
 .main-paginas-recetas ul .li-paginas-recetas {
   margin-bottom: 25 px;
+  font-weight: 400;
   font-size: 15px;
   font-family: "M PLUS 2", sans-serif;
-  font-weight: 400;
   text-align: justify;
 }
 
@@ -253,9 +249,9 @@ footer .footer-container .copyright {
 #main-contacto #h1-contacto {
   margin-bottom: 20px;
   color: rgb(0, 0, 0);
-  font-family: "M PLUS 2", sans-serif;
   font-weight: 400;
   font-size: 40px;
+  font-family: "M PLUS 2", sans-serif;
 }
 #main-contacto .formulario {
   display: grid;
@@ -268,16 +264,16 @@ footer .footer-container .copyright {
 #main-contacto .formulario .categoria-formulario label {
   font-weight: bold;
   background-color: rgb(110, 155, 141);
-  color: white;
-  font-family: "M PLUS 2", sans-serif;
+  color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 20px;
+  font-family: "M PLUS 2", sans-serif;
 }
 #main-contacto .formulario .categoria-formulario input::placeholder,
 #main-contacto .formulario .categoria-formulario textarea::placeholder {
-  font-family: "M PLUS 2", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: "M PLUS 2", sans-serif;
 }
 #main-contacto .formulario .categoria-formulario input {
   padding: 10px;
@@ -297,15 +293,15 @@ footer .footer-container .copyright {
 }
 #main-contacto .formulario .enviar .button {
   padding: 10px 20px;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: rgb(110, 155, 141);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   padding: 15px 30px;
+  font-weight: 400;
   font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
-  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

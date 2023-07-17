@@ -3,7 +3,6 @@ header {
     /*Estilos Barra de Navegacion*/
     .navbar {
         height: 100%;
-        font-family: 'M PLUS 2', sans-serif;
-        font-weight: 400;
+        @include fuentes (500, 16px, $mplus);
     }
 }
