@@ -1,4 +1,7 @@
-.flex-center, .main-index .seccion-index, .main-index {
+.flex-center, .main-index .seccion-destacadas .receta-destacada-uno,
+.main-index .seccion-destacadas .receta-destacada-dos,
+.main-index .seccion-destacadas .receta-destacada-tres,
+.main-index .seccion-destacadas .receta-destacada-cuatro, .main-index .titulo-index, .main-index {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,27 +30,98 @@ header .navbar {
 }
 
 .main-index {
-  height: 75vh;
-  background-image: url(https://images5.alphacoders.com/983/983077.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.main-index .seccion-index {
-  height: 100%;
+  background-color: rgb(110, 155, 141);
+  width: 100%;
   flex-direction: column;
 }
-.main-index .seccion-index .h1-index {
+.main-index .titulo-index {
+  flex-direction: column;
+}
+.main-index .titulo-index .h1-index {
   color: rgba(236, 224, 224, 0.774);
   font-weight: 700;
   font-size: 60px;
   font-family: "Caveat", cursive;
 }
-.main-index .seccion-index .h2-index {
+.main-index .titulo-index .h2-index {
   color: rgba(236, 224, 224, 0.774);
   font-weight: 700;
   font-size: 45px;
   font-family: "Caveat", cursive;
+}
+.main-index .video-index {
+  max-width: 800px;
+  margin: 40px auto;
+}
+.main-index .video-index video {
+  width: 100%;
+  height: auto;
+}
+.main-index .seccion-destacadas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto;
+}
+.main-index .seccion-destacadas h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgba(236, 224, 224, 0.774);
+  font-weight: 700;
+  font-size: 30px;
+  font-family: "M PLUS 2", sans-serif;
+}
+.main-index .seccion-destacadas .receta-destacada-tres,
+.main-index .seccion-destacadas .receta-destacada-cuatro {
+  margin-bottom: 30px;
+}
+.main-index .seccion-destacadas .receta-destacada-uno,
+.main-index .seccion-destacadas .receta-destacada-dos,
+.main-index .seccion-destacadas .receta-destacada-tres,
+.main-index .seccion-destacadas .receta-destacada-cuatro {
+  position: relative;
+  flex-basis: 50%;
+  max-width: 100%;
+  height: 300px;
+  text-align: center;
+  border: 1px solid rgba(236, 224, 224, 0.774);
+  color: rgba(236, 224, 224, 0.774);
+}
+.main-index .seccion-destacadas .receta-destacada-uno h3,
+.main-index .seccion-destacadas .receta-destacada-dos h3,
+.main-index .seccion-destacadas .receta-destacada-tres h3,
+.main-index .seccion-destacadas .receta-destacada-cuatro h3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 0;
+  color: rgba(236, 224, 224, 0.774);
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "M PLUS 2", sans-serif;
+}
+.main-index .seccion-destacadas .receta-destacada-uno a,
+.main-index .seccion-destacadas .receta-destacada-dos a,
+.main-index .seccion-destacadas .receta-destacada-tres a,
+.main-index .seccion-destacadas .receta-destacada-cuatro a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main-index .seccion-destacadas .receta-destacada-uno a img,
+.main-index .seccion-destacadas .receta-destacada-dos a img,
+.main-index .seccion-destacadas .receta-destacada-tres a img,
+.main-index .seccion-destacadas .receta-destacada-cuatro a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 600px) {
@@ -69,9 +143,6 @@ header .navbar {
   .d-flex {
     flex-direction: column;
     gap: 7px;
-  }
-  .btn {
-    width: 100%;
   }
 }
 /*Estilos Footer*/
@@ -196,6 +267,7 @@ footer .footer-container .copyright {
 .main-paginas-recetas .h1-paginas-recetas {
   text-align: center;
   color: rgb(0, 0, 0);
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 40px;
   font-family: "M PLUS 2", sans-serif;
@@ -213,35 +285,46 @@ footer .footer-container .copyright {
   margin-right: auto;
 }
 .main-paginas-recetas .h3-paginas-recetas {
-  text-align: center;
+  text-align: justify;
   color: rgb(0, 0, 0);
-  font-weight: 350;
+  font-weight: 400;
   font-size: 25px;
   font-family: "M PLUS 2", sans-serif;
+  margin: 20px 80px 20px 80px;
 }
 .main-paginas-recetas .p-paginas-recetas-items {
   margin-bottom: 10px;
   text-align: justify;
   text-decoration: underline;
   margin: 10px;
+  margin-left: 80px;
   font-weight: 400;
   font-size: 25px;
   font-family: "M PLUS 2", sans-serif;
 }
 .main-paginas-recetas ul .li-paginas-recetas {
-  margin-bottom: 25 px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
   text-align: justify;
+  margin: 0px 80px 0px 80px;
+}
+.main-paginas-recetas ol {
+  padding-bottom: 50px;
+}
+.main-paginas-recetas ol .li-paginas-recetas {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "M PLUS 2", sans-serif;
+  text-align: justify;
+  margin: 0px 80px 0px 80px;
 }
 
 /*Estilos Contacto*/
 #main-contacto {
   display: grid;
   place-items: center;
-  height: 100vh;
-  background-image: url(https://images2.alphacoders.com/129/1295122.jpg);
+  background-image: url("https://images2.alphacoders.com/129/1295122.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -250,7 +333,7 @@ footer .footer-container .copyright {
   margin-bottom: 20px;
   color: rgb(0, 0, 0);
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
   font-family: "M PLUS 2", sans-serif;
 }
 #main-contacto .formulario {
@@ -259,12 +342,12 @@ footer .footer-container .copyright {
 }
 #main-contacto .formulario .categoria-formulario {
   display: grid;
-  gap: 5px;
 }
 #main-contacto .formulario .categoria-formulario label {
   font-weight: bold;
   background-color: rgb(110, 155, 141);
   color: rgb(255, 255, 255);
+  padding-left: 10px;
   font-weight: 400;
   font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
@@ -276,10 +359,18 @@ footer .footer-container .copyright {
   font-family: "M PLUS 2", sans-serif;
 }
 #main-contacto .formulario .categoria-formulario input {
-  padding: 10px;
-  width: 100%;
-  height: 60px;
-  width: 500px;
+  padding-left: 10px;
+  height: 45px;
+}
+#main-contacto .formulario .categoria-formulario select {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "M PLUS 2", sans-serif;
+}
+#main-contacto .formulario .categoria-formulario select option {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "M PLUS 2", sans-serif;
 }
 #main-contacto .formulario .categoria-formulario textarea {
   padding: 10px;
@@ -291,14 +382,14 @@ footer .footer-container .copyright {
   display: flex;
   justify-content: center;
 }
-#main-contacto .formulario .enviar .button {
+#main-contacto .formulario .enviar button {
   padding: 10px 20px;
+  margin-bottom: 20px;
   color: rgb(255, 255, 255);
   background-color: rgb(110, 155, 141);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 15px 30px;
   font-weight: 400;
   font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
