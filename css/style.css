@@ -302,11 +302,11 @@ footer .footer-container .copyright {
   max-width: 550px;
   max-height: 350px;
 }
-.main-paginas-recetas .h3-paginas-recetas {
+.main-paginas-recetas .p-inicial-recetas {
   text-align: justify;
   color: rgb(0, 0, 0);
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
   margin: 20px 80px 20px 80px;
 }
@@ -333,6 +333,7 @@ footer .footer-container .copyright {
   font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
   text-align: justify;
+  color: rgb(0, 0, 0);
   margin: 0px 80px 0px 80px;
 }
 .main-paginas-recetas .img-paginas-recetas {
@@ -350,6 +351,7 @@ footer .footer-container .copyright {
   font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
   text-align: justify;
+  color: rgb(0, 0, 0);
   margin: 0px 80px 0px 80px;
 }
 
