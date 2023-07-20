@@ -35,11 +35,10 @@
             text-align: center;
             margin-bottom: 40px;
             color: $color-index;
-            @include fuentes(700, 30px, $mplus);
+            @include fuentes(700, 60px, $caveat);
         }
-        .receta-destacada-tres,
         .receta-destacada-cuatro {
-            margin-bottom: 30px;
+            margin-bottom: 80px;
         }
         .receta-destacada-uno,
         .receta-destacada-dos,
@@ -63,7 +62,7 @@
                 padding: 10px;
                 margin: 0;
                 color: $color-index;
-                @include fuentes(400, 20px, $mplus);
+                @include fuentes(400, 30px, $mplus);
             }
             a {
                 display: block;
@@ -79,31 +78,38 @@
         }
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .main-index {
     height: auto;
     padding: 20px;
+        .titulo-index {
+            .h1-index {
+                @include fuentes(700, 40px, $caveat);
+                text-align: center;
+            }
+                .h2-index {
+                    @include fuentes(700, 30px, $caveat);
+                text-align: center;
+            }
+        }
     }
-
-    .h1-index {
-    font-size: 40px;
-    text-align: center;
-    }
-
-    .h2-index {
-    font-size: 30px;
-    text-align: center;
-    }
-
-    .seccion-index {
-    text-align: center;
-    }
-
-    .d-flex {
-    flex-direction: column;
-    gap: 7px;
+    .seccion-destacadas {
+        flex-direction: column;
+        width: 100%;
+        .receta-destacada-uno,
+        .receta-destacada-dos,
+        .receta-destacada-tres,
+        .receta-destacada-cuatro {
+            flex-basis: 100%;
+        }
     }
 }
+
+
+
+
+
+
 
 
 

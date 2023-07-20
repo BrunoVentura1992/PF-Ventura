@@ -1,24 +1,36 @@
 /*Estilos Recetas*/
 .main-recetas {
-    height: 75vh;
-    @include display(flex, center);
+    @extend .flex-center;
     background-color: $color-principal;
+    flex-direction: column;
+    height: auto;
+    .h1-recetas {
+        text-align: center;
+        color: $color-index;
+        margin-top: 40px;
+        @include fuentes(700, 60px, $caveat);
+    }
     .container-recetas {
-        flex-wrap: wrap;
         @include display(flex, center);
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
         .tarjeta-recetas {
-            flex: 1 0 calc(25% - 40px);
-            width: 20%;
             border-radius: 5px;
-            margin: 20px;
-            padding: 10px;
+            margin: 40px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             border: 3px solid $color-index;
+            flex: 1 0 calc(45% - 40px);
+            align-self: stretch;
             .img-tarjetas {
                 width: 100%;
-                height: auto;
+                height: 250px;
                 border-radius: 5px 5px 0 0;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
             }
             .tarjeta-principal {
                 flex: 1;
@@ -27,12 +39,13 @@
                 .h2-tarjetas {
                     text-align: center;
                     color: $negro;
-                    @include fuentes(400, 20px, $mplus);
+                    @include fuentes(400, 22px, $mplus);
+                    font-weight: bold;
                 }
                 .p-tarjetas {
                     margin-bottom: 10px;
                     text-align: justify;
-                    @include fuentes(400, 15px, $mplus);
+                    @include fuentes(500, 18px, $mplus);
                 }
                 .ver-mas-recetas {
                     display: inline-block;
@@ -43,35 +56,32 @@
                     border-radius: 3px;
                     border: 1px solid;
                     text-align: center;
+                    @include fuentes(500, 18px, $mplus);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 499px) {
+.main-recetas {
+    .container-recetas {
+        justify-content: flex-start;
+        align-items: center;
+        .tarjeta-recetas {
+            flex: 1 0 calc(90% - 40px);
+            .tarjeta-principal {
+                .h2-tarjetas {
+                    @include fuentes(400, 18px, $mplus);
+                }
+                .p-tarjetas,
+                .ver-mas-recetas {
                     @include fuentes(400, 15px, $mplus);
                 }
             }
         }
     }
 }
-@media (max-width: 767px) {
-.main-recetas {
-    height: auto;
-    .container-recetas {
-        justify-content: flex-start;
-        align-items: center;
-        .tarjeta-recetas {
-            flex: 1 0 calc(90% - 40px);
-        }
-    }   
-}
-}
-@media (max-width: 1023px) and (min-width: 768px) {
-.main-recetas {
-    height: auto;
-    .container-recetas {
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        .tarjeta-recetas {
-            flex: 1 0 calc(45% - 40px);
-            align-self: stretch;
-        }
-    }
-}
-}
+}   
+
+
+

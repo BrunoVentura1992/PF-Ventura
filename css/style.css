@@ -1,4 +1,4 @@
-.flex-center, .main-index .seccion-destacadas .receta-destacada-uno,
+.flex-center, .main-recetas, .main-index .seccion-destacadas .receta-destacada-uno,
 .main-index .seccion-destacadas .receta-destacada-dos,
 .main-index .seccion-destacadas .receta-destacada-tres,
 .main-index .seccion-destacadas .receta-destacada-cuatro, .main-index .titulo-index, .main-index {
@@ -38,13 +38,13 @@ header .navbar {
   flex-direction: column;
 }
 .main-index .titulo-index .h1-index {
-  color: rgba(236, 224, 224, 0.774);
+  color: rgb(243, 246, 247);
   font-weight: 700;
   font-size: 60px;
   font-family: "Caveat", cursive;
 }
 .main-index .titulo-index .h2-index {
-  color: rgba(236, 224, 224, 0.774);
+  color: rgb(243, 246, 247);
   font-weight: 700;
   font-size: 45px;
   font-family: "Caveat", cursive;
@@ -69,14 +69,13 @@ header .navbar {
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
-  color: rgba(236, 224, 224, 0.774);
+  color: rgb(243, 246, 247);
   font-weight: 700;
-  font-size: 30px;
-  font-family: "M PLUS 2", sans-serif;
+  font-size: 60px;
+  font-family: "Caveat", cursive;
 }
-.main-index .seccion-destacadas .receta-destacada-tres,
 .main-index .seccion-destacadas .receta-destacada-cuatro {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 .main-index .seccion-destacadas .receta-destacada-uno,
 .main-index .seccion-destacadas .receta-destacada-dos,
@@ -87,8 +86,8 @@ header .navbar {
   max-width: 100%;
   height: 300px;
   text-align: center;
-  border: 1px solid rgba(236, 224, 224, 0.774);
-  color: rgba(236, 224, 224, 0.774);
+  border: 1px solid rgb(243, 246, 247);
+  color: rgb(243, 246, 247);
 }
 .main-index .seccion-destacadas .receta-destacada-uno h3,
 .main-index .seccion-destacadas .receta-destacada-dos h3,
@@ -101,9 +100,9 @@ header .navbar {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   margin: 0;
-  color: rgba(236, 224, 224, 0.774);
+  color: rgb(243, 246, 247);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 30px;
   font-family: "M PLUS 2", sans-serif;
 }
 .main-index .seccion-destacadas .receta-destacada-uno a,
@@ -124,25 +123,32 @@ header .navbar {
   object-fit: cover;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .main-index {
     height: auto;
     padding: 20px;
   }
-  .h1-index {
+  .main-index .titulo-index .h1-index {
+    font-weight: 700;
     font-size: 40px;
+    font-family: "Caveat", cursive;
     text-align: center;
   }
-  .h2-index {
+  .main-index .titulo-index .h2-index {
+    font-weight: 700;
     font-size: 30px;
+    font-family: "Caveat", cursive;
     text-align: center;
   }
-  .seccion-index {
-    text-align: center;
-  }
-  .d-flex {
+  .seccion-destacadas {
     flex-direction: column;
-    gap: 7px;
+    width: 100%;
+  }
+  .seccion-destacadas .receta-destacada-uno,
+  .seccion-destacadas .receta-destacada-dos,
+  .seccion-destacadas .receta-destacada-tres,
+  .seccion-destacadas .receta-destacada-cuatro {
+    flex-basis: 100%;
   }
 }
 /*Estilos Footer*/
@@ -175,30 +181,42 @@ footer .footer-container .copyright {
 
 /*Estilos Recetas*/
 .main-recetas {
-  height: 75vh;
-  display: flex;
-  justify-content: center;
   background-color: rgb(110, 155, 141);
+  flex-direction: column;
+  height: auto;
+}
+.main-recetas .h1-recetas {
+  text-align: center;
+  color: rgb(243, 246, 247);
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Caveat", cursive;
 }
 .main-recetas .container-recetas {
-  flex-wrap: wrap;
   display: flex;
   justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .main-recetas .container-recetas .tarjeta-recetas {
-  flex: 1 0 calc(25% - 40px);
-  width: 20%;
   border-radius: 5px;
-  margin: 20px;
-  padding: 10px;
+  margin: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  border: 3px solid rgba(236, 224, 224, 0.774);
+  border: 3px solid rgb(243, 246, 247);
+  flex: 1 0 calc(45% - 40px);
+  align-self: stretch;
 }
 .main-recetas .container-recetas .tarjeta-recetas .img-tarjetas {
   width: 100%;
-  height: auto;
+  height: 250px;
   border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal {
   flex: 1;
@@ -210,34 +228,32 @@ footer .footer-container .copyright {
   text-align: center;
   color: rgb(0, 0, 0);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "M PLUS 2", sans-serif;
+  font-weight: bold;
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .p-tarjetas {
   margin-bottom: 10px;
   text-align: justify;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 18px;
   font-family: "M PLUS 2", sans-serif;
 }
 .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .ver-mas-recetas {
   display: inline-block;
   padding: 5px 10px;
-  background-color: rgba(236, 224, 224, 0.774);
+  background-color: rgb(243, 246, 247);
   color: rgb(0, 0, 0);
   text-decoration: none;
   border-radius: 3px;
   border: 1px solid;
   text-align: center;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 18px;
   font-family: "M PLUS 2", sans-serif;
 }
 
-@media (max-width: 767px) {
-  .main-recetas {
-    height: auto;
-  }
+@media (max-width: 499px) {
   .main-recetas .container-recetas {
     justify-content: flex-start;
     align-items: center;
@@ -245,19 +261,16 @@ footer .footer-container .copyright {
   .main-recetas .container-recetas .tarjeta-recetas {
     flex: 1 0 calc(90% - 40px);
   }
-}
-@media (max-width: 1023px) and (min-width: 768px) {
-  .main-recetas {
-    height: auto;
+  .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .h2-tarjetas {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "M PLUS 2", sans-serif;
   }
-  .main-recetas .container-recetas {
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .main-recetas .container-recetas .tarjeta-recetas {
-    flex: 1 0 calc(45% - 40px);
-    align-self: stretch;
+  .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .p-tarjetas,
+  .main-recetas .container-recetas .tarjeta-recetas .tarjeta-principal .ver-mas-recetas {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "M PLUS 2", sans-serif;
   }
 }
 /*Estilos Paginas Recetas*/
@@ -268,6 +281,8 @@ footer .footer-container .copyright {
   text-align: center;
   color: rgb(0, 0, 0);
   margin-bottom: 20px;
+  padding-top: 2rem;
+  font-weight: bold;
   font-weight: 400;
   font-size: 40px;
   font-family: "M PLUS 2", sans-serif;
@@ -278,11 +293,14 @@ footer .footer-container .copyright {
   font-weight: 400;
   font-size: 30px;
   font-family: "M PLUS 2", sans-serif;
+  margin-bottom: 2rem;
 }
 .main-paginas-recetas .img-paginas-recetas {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 550px;
+  max-height: 350px;
 }
 .main-paginas-recetas .h3-paginas-recetas {
   text-align: justify;
@@ -291,6 +309,14 @@ footer .footer-container .copyright {
   font-size: 25px;
   font-family: "M PLUS 2", sans-serif;
   margin: 20px 80px 20px 80px;
+}
+.main-paginas-recetas .video-paginas {
+  max-width: 700px;
+  margin: 40px auto;
+}
+.main-paginas-recetas .video-paginas video {
+  width: 100%;
+  height: auto;
 }
 .main-paginas-recetas .p-paginas-recetas-items {
   margin-bottom: 10px;
@@ -309,6 +335,13 @@ footer .footer-container .copyright {
   text-align: justify;
   margin: 0px 80px 0px 80px;
 }
+.main-paginas-recetas .img-paginas-recetas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  max-height: 350px;
+}
 .main-paginas-recetas ol {
   padding-bottom: 50px;
 }
@@ -320,6 +353,47 @@ footer .footer-container .copyright {
   margin: 0px 80px 0px 80px;
 }
 
+@media (max-width: 767px) {
+  .main-paginas-recetas .h1-paginas-recetas {
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "M PLUS 2", sans-serif;
+  }
+  .main-paginas-recetas .h2-paginas-recetas {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "M PLUS 2", sans-serif;
+  }
+  .main-paginas-recetas .img-paginas-recetas {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .main-paginas-recetas .h3-paginas-recetas {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "M PLUS 2", sans-serif;
+    margin: 20px;
+  }
+  .main-paginas-recetas .p-paginas-recetas-items {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "M PLUS 2", sans-serif;
+    margin: 10px 20px;
+  }
+  .main-paginas-recetas ul .li-paginas-recetas {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "M PLUS 2", sans-serif;
+    margin: 0px 20px;
+  }
+  .main-paginas-recetas ol .li-paginas-recetas {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "M PLUS 2", sans-serif;
+    margin: 0px 20px;
+  }
+}
 /*Estilos Contacto*/
 #main-contacto {
   display: grid;
@@ -328,17 +402,25 @@ footer .footer-container .copyright {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 20px;
 }
 #main-contacto #h1-contacto {
   margin-bottom: 20px;
-  color: rgb(0, 0, 0);
-  font-weight: 400;
-  font-size: 50px;
-  font-family: "M PLUS 2", sans-serif;
+  color: rgb(243, 246, 247);
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Caveat", cursive;
+}
+@media (max-width: 767px) {
+  #main-contacto #h1-contacto {
+    font-size: 30px;
+  }
 }
 #main-contacto .formulario {
   display: grid;
   gap: 20px;
+  max-width: 500px;
+  width: 100%;
 }
 #main-contacto .formulario .categoria-formulario {
   display: grid;
@@ -376,7 +458,6 @@ footer .footer-container .copyright {
   padding: 10px;
   width: 100%;
   height: 150px;
-  width: 500px;
 }
 #main-contacto .formulario .enviar {
   display: flex;
@@ -393,6 +474,17 @@ footer .footer-container .copyright {
   font-weight: 400;
   font-size: 20px;
   font-family: "M PLUS 2", sans-serif;
+}
+
+@media (max-width: 767px) {
+  #h1-contacto {
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "M PLUS 2", sans-serif;
+  }
+  #main-contacto {
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
