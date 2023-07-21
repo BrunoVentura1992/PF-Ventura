@@ -2,18 +2,12 @@
 #main-contacto {
     display: grid;
     place-items: center;
-    background-image: url("https://images2.alphacoders.com/129/1295122.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(to top, $color-gradiente-primero, $color-gradiente-segundo);
     padding: 20px;
     #h1-contacto {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         color: $color-index;
-        @include fuentes(700, 60px, $caveat);
-        @media (max-width: 767px) {
-            font-size: 30px;
-        }
+        @include fuentes(700, 70px, $caveat);
     }
     .formulario {
         display: grid;
@@ -24,8 +18,8 @@
         display: grid;
             label {
                 font-weight: bold;
-                background-color: $color-principal;
-                color: $blanco;
+                background-color: $color-label;
+                color: $color-label-texto;
                 padding-left: 10px;
                 @include fuentes(400, 20px, $mplus);
             }
@@ -55,23 +49,19 @@
                 padding: 10px 20px;
                 margin-bottom: 20px;
                 color: $blanco;
-                background-color: $color-principal;
-                border: none;
+                background: linear-gradient(to top, $color-gradiente-primero, $color-gradiente-segundo);
                 border-radius: 5px;
+                border-color: $blanco;
                 cursor: pointer;
                 @include fuentes(400, 20px, $mplus);
+                &:hover {
+                    color: $color-label-texto;
+                }
             }
         }
     }
 }
-@media (max-width: 767px) {
-    #h1-contacto {
-        @include fuentes(400, 25px, $mplus);
-    }
-    #main-contacto {
-        padding: 10px;
-    }
-}
+
 
 
 

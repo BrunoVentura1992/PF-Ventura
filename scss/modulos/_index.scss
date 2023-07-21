@@ -9,6 +9,7 @@
         .h1-index {
             color: $color-index;
             @include fuentes(700, 60px, $caveat);
+            padding-top: 30px;
         }
         .h2-index {
             color: $color-index;
@@ -28,7 +29,7 @@
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
-        width: 75%;
+        width: 100%;
         margin: 0 auto;
         h2 {
             width: 100%;
@@ -52,7 +53,7 @@
             text-align: center;
             border: 1px solid $color-index;
             color: $color-index;
-        
+            overflow: hidden;
             h3 {
                 position: absolute;
                 left: 0;
@@ -73,7 +74,11 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    transition: transform 0.5s ease;                  
                 }
+            }
+            &:hover img {
+                transform: scale(1.2);
             }
         }
     }
@@ -104,12 +109,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 

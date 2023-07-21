@@ -1,7 +1,7 @@
 /*Estilos Recetas*/
 .main-recetas {
     @extend .flex-center;
-    background-color: $color-principal;
+    background: linear-gradient(to top, $color-gradiente-primero, $color-gradiente-segundo);
     flex-direction: column;
     height: auto;
     .h1-recetas {
@@ -48,15 +48,21 @@
                     @include fuentes(500, 18px, $mplus);
                 }
                 .ver-mas-recetas {
+                    margin: 0 auto;
+                    background: linear-gradient(to left, $color-fondo-boton, $color-gradiente-segundo);
                     display: inline-block;
-                    padding: 5px 10px;
-                    background-color: $color-index;
+                    padding: 10px 10px;
                     color: $negro;
                     text-decoration: none;
-                    border-radius: 3px;
-                    border: 1px solid;
+                    border-radius: 15px;
+                    border: 2px solid $color-index;
                     text-align: center;
+                    width: 190px;
+                    height: 55px;
                     @include fuentes(500, 18px, $mplus);
+                    &:hover {
+                        color: rgb(135, 141, 122);
+                    }
                 }
             }
         }
@@ -69,6 +75,8 @@
         align-items: center;
         .tarjeta-recetas {
             flex: 1 0 calc(90% - 40px);
+            margin: 20px;
+            padding: 10px;
             .tarjeta-principal {
                 .h2-tarjetas {
                     @include fuentes(400, 18px, $mplus);

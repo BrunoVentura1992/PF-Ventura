@@ -6,14 +6,14 @@
         color: $negro;
         margin-bottom: 20px;
         padding-top: 2rem;
+        @include fuentes(500, 40px, $mplus);
         font-weight: bold;
-        @include fuentes(400, 40px, $mplus);
     }
     .h2-paginas-recetas {
         text-align: center;
         color: $negro;
-        @include fuentes(400, 30px, $mplus);
-        margin-bottom: 2rem;
+        @include fuentes(500, 25px, $mplus);
+        margin: 20px 80px 40px 80px;
     }
     .img-paginas-recetas {
         display: block;
@@ -72,17 +72,19 @@
 @media (max-width: 767px) {
     .main-paginas-recetas {
         .h1-paginas-recetas {
-            @include fuentes(400, 25px, $mplus);
+            @include fuentes(500, 25px, $mplus);
         }
         .h2-paginas-recetas {
-            @include fuentes(400, 15px, $mplus);
+            @include fuentes(400, 20px, $mplus);
+            margin: 20px;
+            text-align: justify;
         }
         .img-paginas-recetas {
             max-width: 100%;
             height: auto;
             padding: 20px
         }
-        .h3-paginas-recetas {
+        .p-inicial-recetas {
             @include fuentes(400, 15px, $mplus);
             margin: 20px;
         }
