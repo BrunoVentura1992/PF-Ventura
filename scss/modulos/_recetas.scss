@@ -24,6 +24,21 @@
             border: 3px solid $color-index;
             flex: 1 0 calc(45% - 40px);
             align-self: stretch;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;                  
+                }
+            }
+                &:hover img {
+                    transform: scale(1.35);
+                }
             .img-tarjetas {
                 width: 100%;
                 height: 250px;
@@ -38,7 +53,7 @@
                 @include display(flex, space-between);
                 .h2-tarjetas {
                     text-align: center;
-                    color: $negro;
+                    color: $color-index;
                     @include fuentes(400, 22px, $mplus);
                     font-weight: bold;
                 }

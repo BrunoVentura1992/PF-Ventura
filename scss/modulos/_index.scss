@@ -39,7 +39,7 @@
             @include fuentes(700, 60px, $caveat);
         }
         .receta-destacada-cuatro {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         .receta-destacada-uno,
         .receta-destacada-dos,
@@ -78,7 +78,7 @@
                 }
             }
             &:hover img {
-                transform: scale(1.2);
+                transform: scale(1.5);
             }
         }
     }
